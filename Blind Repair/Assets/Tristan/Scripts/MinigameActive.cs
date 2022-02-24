@@ -9,7 +9,7 @@ public class MinigameActive : MonoBehaviour
 
     public void Update()
     {
-        if (!PlayerInRange) return;
+        if (!PlayerInRange && !Minigameactive) return;
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F))
         {
             Minigameactive = false;
