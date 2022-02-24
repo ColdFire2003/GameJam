@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 04478e300a02e1649a5ff066da590ed0, type: 2}
     - target: {fileID: 1673977985512273575, guid: b88fea30c5dc7884b949eff5f6aeac20, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1673977985512273575, guid: b88fea30c5dc7884b949eff5f6aeac20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -497,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b6363097c826041a25ad6a87f1f182, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.49
+      value: -3.672
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b6363097c826041a25ad6a87f1f182, type: 3}
       propertyPath: m_LocalPosition.z
@@ -669,6 +669,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: d65c46584427d6848a5d4c23a64bd50a, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d65c46584427d6848a5d4c23a64bd50a, type: 3}
       propertyPath: m_Name
       value: Room_001
@@ -682,6 +686,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3040732498292822934, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.98039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040732498292822934, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.5697449
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040732498292822934, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8134835121525595294, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
       propertyPath: m_Name
       value: Particle System
@@ -696,11 +712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9179107348223673657, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.63
+      value: -3.96
       objectReference: {fileID: 0}
     - target: {fileID: 9179107348223673657, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.56
+      value: -6.82
       objectReference: {fileID: 0}
     - target: {fileID: 9179107348223673657, guid: cbfd3d8de366eeb41a7ba03ce344a5a0, type: 3}
       propertyPath: m_LocalRotation.w
