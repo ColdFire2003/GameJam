@@ -212,4 +212,5 @@ MonoBehaviour:
   _minigame:
     m_PersistentCalls:
       m_Calls: []
+  _whichStation: 3
   Minigameactive: 1

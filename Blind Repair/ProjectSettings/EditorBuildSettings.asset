@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/main scen/InfoMenu.unity
     guid: 508ece21ed1f04c4ca039cddfbdcf20e
+  - enabled: 1
+    path: Assets/Tijani/Scenes/Minigame 01.unity
+    guid: 2cd0ec6c86f9038408ec1dbfd3a84655
+  - enabled: 1
+    path: Assets/Tijani/Scenes/Minigame 02.unity
+    guid: f319e1aa655d55447a81facae727d810
+  - enabled: 1
+    path: Assets/Tijani/Scenes/LoseScreenTest.unity
+    guid: 47458244b38624f498b291d0fc02605d
+  - enabled: 1
+    path: Assets/Tijani/Scenes/WinScreenTest.unity
+    guid: 2c459752d47cb684a9031d8f1ec29647
   m_configObjects: {}
