@@ -10,9 +10,20 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         // will load the scene we give it
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("main scen");
     }
 
+    public void BackToMainMenu()
+    {
+        // will load the scene we give it
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void InfoMenu()
+    {
+        // will load the scene we give it
+        SceneManager.LoadScene("InfoMenu");
+    }
     public void PopUpCredits()
     {
         // will make a pop up the settings menu
