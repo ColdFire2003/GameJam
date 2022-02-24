@@ -37,6 +37,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         // closes the application
+        print("log out");
         Application.Quit();
     }
     #endregion

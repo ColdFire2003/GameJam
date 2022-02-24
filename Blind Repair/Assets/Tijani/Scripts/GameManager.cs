@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == _mainScene)
         {
-            print(_repairStations.Length);
+            //print(_repairStations.Length);
 
             if (_tasksCompleted > _repairStations.Length / 2)
             {
