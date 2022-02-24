@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -10,7 +8,8 @@ public class Minigame02 : MonoBehaviour
     [SerializeField] private AudioSource _source;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _target;
-    [Range(0f, 20f)] [SerializeField] private float _randomMin, _randomMax;
+    [Range(0f, 20f)] 
+    [SerializeField] private float _randomMin, _randomMax;
 
     [SerializeField] private float _playerSpeed;
     [SerializeField] private UnityEvent _event;
@@ -20,6 +19,7 @@ public class Minigame02 : MonoBehaviour
     private void Start()
     {
         SetPosition();
+        StartCoroutine(Timer());
     }
 
     private void Update()
@@ -30,8 +30,9 @@ public class Minigame02 : MonoBehaviour
         _source.pitch = distancePlayerTarget / 50f;
         _source.pitch = Mathf.Clamp(_source.pitch, 0f, 1f );
 
-        if (distancePlayerTarget < .5f)
+        if (distancePlayerTarget < 1f)
         {
+            GameManager.Instance.TaskCompleted();
              _event.Invoke();
         }
     }
@@ -78,5 +79,13 @@ public class Minigame02 : MonoBehaviour
     {
         _player.transform.position = GivePosition(_randomMin, _randomMax);
         _target.transform.position = GivePosition(-_randomMin, -_randomMax);
+    }
+
+    private IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(60f);
+        
+        GameManager.Instance.TaskFailed();
+        _event.Invoke();
     }
 }
