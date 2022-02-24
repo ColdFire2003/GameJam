@@ -5,7 +5,6 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    private bool _ActiveSettings;
     private bool _ActiveCredits;
     public GameObject Credits;
     public GameObject Settings;
@@ -15,17 +14,6 @@ public class MainMenu : MonoBehaviour
     {
         // will load the scene we give it
         SceneManager.LoadScene("Test");
-    }
-
-    public void PopUpSettings()
-    {
-        // will make a pop up the settings menu
-        if (_ActiveSettings == true)
-        {
-            Settings.SetActive(true);
-            Credits.SetActive(false);
-        }
-        else Settings.SetActive(false);
     }
 
     public void PopUpCredits()
@@ -51,16 +39,9 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // when press ESC deactivates UI
         {
-            _ActiveSettings = false; // Deactivates UI
-            PopUpSettings();
-
             _ActiveCredits = false; // Deactivates UI
             PopUpCredits();
         }
-    }
-    public void SetVolume(float volume)
-    {
-     
     }
     #endregion
 }

@@ -249,6 +249,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Minigameactivate: 1
 --- !u!1 &707048501
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +472,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 5.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -685,7 +686,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1016425609
 MonoBehaviour:
@@ -700,11 +701,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLight: {fileID: 959853142}
-  ActiveLightChange: 0
-  RepeatLightChange: 0
-  RangeSpeed: 5
-  MaxRange: 20
-  MinRange: 10
+  _EcoLocation: 0
+  _StopEcoLocation: 0
+  _RangeSpeed: 2.5
+  _MaxRange: 10
+  _MinRange: 5.5
 --- !u!1 &1339502033
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Lighting : MonoBehaviour
@@ -5,41 +7,41 @@ public class Lighting : MonoBehaviour
     public Light PlayerLight;
 
     //Range variables
-    [SerializeField] private bool ActiveLightChange = false;
-    [SerializeField] private bool RepeatLightChange = false;
-    [SerializeField] private float RangeSpeed = 1.0f;
-    [SerializeField] private float MaxRange = 20.0f;
-    [SerializeField] private float MinRange = 10.0f;
+    [SerializeField] private bool _EcoLocation = false;
+    [SerializeField] private bool _StopEcoLocation = false;
+    [SerializeField] private float _RangeSpeed = 1.5f;
+    [SerializeField] private float _MaxRange = 10.0f;
+    [SerializeField] private float _MinRange = 5.5f;
 
-    private float StartTime;
+    private float _StartTime;
 
     void Start()
     {
-        StartTime = Time.time;
+        _StartTime = Time.time;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            ActiveLightChange = true;
+            _EcoLocation = true;
+            _StopEcoLocation = false;
         }
 
-        if (ActiveLightChange)
+        if(Input.GetKeyDown(KeyCode.T))
         {
-            if (RepeatLightChange)
-            {
-                PlayerLight.range = Mathf.PingPong(Time.time * RangeSpeed, MaxRange);
-            }
-            else
-            {
-                PlayerLight.range = Time.time * RangeSpeed;
-                if (PlayerLight.range >= MaxRange)
-                {
-                    PlayerLight.range = MinRange;
-                    ActiveLightChange = false;
-                }
-            }
+            _StopEcoLocation = true;
+        }
+
+        if (_EcoLocation)
+        {
+            PlayerLight.range = Mathf.PingPong(Time.time * _RangeSpeed, _MaxRange);
+        }
+
+        if (_StopEcoLocation && PlayerLight.range <= 5.5)
+        {
+                _EcoLocation = false;
+                PlayerLight.range = 5.5f;
         }
     }
 }
