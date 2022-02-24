@@ -3,20 +3,32 @@ using UnityEngine.Events;
 
 public class MinigameActive : MonoBehaviour
 {
-    [SerializeField] private UnityEvent Minigame;
-    [SerializeField] private bool Minigameactivate;
+    [SerializeField] private UnityEvent _minigame;
+    public bool Minigameactive = true;
+    private bool PlayerInRange;
 
-    public void OnTriggerStay(Collider other)
+    public void Update()
     {
-        if (Minigameactivate)
+        if (!PlayerInRange) return;
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F))
         {
-            //Debug.Log("enter collision");
-            if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) || other.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
-            {
-                // always gets it 2 times
-                Debug.Log("interact" + " " + other.name);
-                Minigame.Invoke();
-            }
+            Minigameactive = false;
+            _minigame.Invoke();
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && Minigameactive)
+        {
+            PlayerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerInRange = false;
         }
     }
 }

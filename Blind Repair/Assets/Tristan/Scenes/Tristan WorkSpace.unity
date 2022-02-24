@@ -234,22 +234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6713d559fadd0247bb9eee422a7e8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Minigame:
+  _minigame:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 707048501}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Minigameactivate: 1
+      m_Calls: []
+  Minigameactive: 1
 --- !u!1 &707048501
 GameObject:
   m_ObjectHideFlags: 0
