@@ -703,8 +703,8 @@ MonoBehaviour:
   PlayerLight: {fileID: 959853142}
   _EcoLocation: 0
   _StopEcoLocation: 0
-  _RangeSpeed: 2.5
-  _MaxRange: 10
+  _RangeSpeed: 15
+  _MaxRange: 35
   _MinRange: 5.5
 --- !u!1 &1339502033
 GameObject:

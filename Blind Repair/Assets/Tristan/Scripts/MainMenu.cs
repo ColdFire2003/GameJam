@@ -1,13 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    private bool _ActiveCredits;
-    public GameObject Credits;
-    public GameObject Settings;
+    [SerializeField] private bool _ActiveCredits;
+    [SerializeField] private GameObject Credits;
 
     #region Buttons
     public void StartGame()
@@ -21,7 +18,6 @@ public class MainMenu : MonoBehaviour
         // will make a pop up the settings menu
         if (_ActiveCredits == true)
         {
-            Settings.SetActive(false);
             Credits.SetActive(true);
         }
         else Credits.SetActive(false);
@@ -31,17 +27,6 @@ public class MainMenu : MonoBehaviour
     {
         // closes the application
         Application.Quit();
-    }
-    #endregion
-
-    #region Settings
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape)) // when press ESC deactivates UI
-        {
-            _ActiveCredits = false; // Deactivates UI
-            PopUpCredits();
-        }
     }
     #endregion
 }

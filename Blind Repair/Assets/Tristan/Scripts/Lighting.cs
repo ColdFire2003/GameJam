@@ -20,7 +20,7 @@ public class Lighting : MonoBehaviour
         _StartTime = Time.time;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -28,14 +28,14 @@ public class Lighting : MonoBehaviour
             _StopEcoLocation = false;
         }
 
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            _StopEcoLocation = true;
-        }
-
         if (_EcoLocation)
         {
             PlayerLight.range = Mathf.PingPong(Time.time * _RangeSpeed, _MaxRange);
+        }
+
+        if(PlayerLight.range >= 6)
+        {
+            _StopEcoLocation = true;
         }
 
         if (_StopEcoLocation && PlayerLight.range <= 5.5)
